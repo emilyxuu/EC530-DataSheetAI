@@ -1,0 +1,28 @@
+# Files and folders listed here are ignored by Git!
+
+# Python cache files: auto-generated
+__pycache__/
+*.py[cod]
+*.pyo
+
+# The SQLite database file
+*.db
+
+# Error log: generated during runtime
+error_log.txt
+
+# Any virtual environment folders
+venv/
+.venv/
+env/
+
+# macOS system files
+.DS_Store
+
+# VS Code / my editor settings
+.vscode/
+.idea/
+
+# Environment variable files (MY API KEYS)
+.env
+*.env
