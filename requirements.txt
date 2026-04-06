@@ -1,0 +1,3 @@
+pandas # reads and manages data from CSV files
+anthropic # connects code to Claude to translate questions into SQL
+python-dotenv # loads secret API key from hidden .env file
