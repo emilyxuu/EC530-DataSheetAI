@@ -126,3 +126,7 @@ Claude generated `state_name` instead of `Description`. The test `test_catches_h
 | `query_service/sql_validator.py` | Used Claude to help implement the validator after I designed the API and tests |
 | `schema/schema_manager.py` | Used Claude to suggest the pandas to SQLite type mapping |
 | `README.md` | Used Claude double check README included all my files, clear formatting, and no missing steps for a finalized assignment summary |
+
+## System Review Video
+
+Watch my DataSheetAI system review video here: https://drive.google.com/file/d/1O2Hk6DhNzkHbn9lqVN0HCWvleOMkfqNb/view?usp=drive_link
