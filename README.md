@@ -90,7 +90,7 @@ python tests/test_query_service.py
 Separation of concerns. The CLI only handles input and output. The QueryService handles all logic. This means if we ever add a different interface, it reuses QueryService with no changes to validation or execution.
 
 **Why is LLM output treated as untrusted?**
-LLMs hallucinate. During development, Claude generated `SELECT state_name FROM population_by_race` — but the real column is `Description`. The SQL Validator caught this before it reached the database. Every piece of SQL the LLM returns is validated before it runs, no exceptions.
+LLMs hallucinate. During development, Claude generated `SELECT state_name FROM population_by_race`, but the real column is `Description`. The SQL Validator caught this before it reached the database. Every piece of SQL the LLM returns is validated before it runs, no exceptions.
 
 **Why build INSERT statements manually instead of df.to_sql()?**
 The assignment requires it. It also forces understanding of schema creation and type mapping, and lets us handle NaN values explicitly so they become NULL in SQLite instead of crashing.
@@ -125,7 +125,7 @@ Claude generated `state_name` instead of `Description`. The test `test_catches_h
 | `llm/llm_adapter.py` | Claude translates questions to SQL |
 | `query_service/sql_validator.py` | Used Claude to help implement the validator after I designed the API and tests |
 | `schema/schema_manager.py` | Used Claude to suggest the pandas to SQLite type mapping |
-| `README.md` | Used Claude double check README included all my files, clear formatting, and no missing steps for a finalized assignment summary |
+| `README.md` | Used Claude double check this README included all necessary files, better formatting, clarified wording, and all assignment requirements |
 
 ## System Review Video
 
