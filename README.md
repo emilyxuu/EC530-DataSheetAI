@@ -13,12 +13,12 @@ The system is built on a modular architecture where responsibilities are strictl
 
 ```
 User
- └── CLI              (Entry point — never touches the database directly)
+ └── CLI   (Entry point: never touches the database directly)
       ├── Query Service   (Coordinates flow: LLM → Validate → Execute)
       │    ├── LLM Adapter   (Translates English to SQL)
-      │    ├── SQL Validator (Blocks unsafe queries before execution)
+      │    ├── SQL Validator   (Blocks unsafe queries before execution)
       │    └── SQLite DB
-      └── Loader & Schema (Handles data ingestion and dynamic table creation)
+      └── Loader & Schema   (Handles data ingestion and dynamic table creation)
 ```
 
 | Module | File | Job |
@@ -125,4 +125,4 @@ Claude generated `state_name` instead of `Description`. The test `test_catches_h
 | `llm/llm_adapter.py` | Claude translates questions to SQL |
 | `query_service/sql_validator.py` | Used Claude to help implement the validator after I designed the API and tests |
 | `schema/schema_manager.py` | Used Claude to suggest the pandas to SQLite type mapping |
-| `README.md` | Used Claude double check README included all my files and steps for a finalized assignment summary |
+| `README.md` | Used Claude double check README included all my files, clear formatting, and no missing steps for a finalized assignment summary |
